@@ -170,7 +170,7 @@ int main() {
             printf("*** EMPATE! ***\n");
             printf("Carta1 - :%s              População:%lu       \n", cidade1, populacao1);
             printf("Carta2 - :%s              População:%lu       \n", cidade2, populacao2);
-                }if else(populacao1 > populacao2)
+                }else if(populacao1 > populacao2)
                 {
                     printf("Carta1 - :%s              VENCEU!\n", cidade1);
                     printf("Carta1 - :%s              População:%lu       \n", cidade1, populacao1);
@@ -183,7 +183,7 @@ int main() {
                 }
                 
         break;
-        
+
     
     default:
         break;
