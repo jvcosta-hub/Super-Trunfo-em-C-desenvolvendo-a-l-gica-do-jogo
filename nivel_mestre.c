@@ -2,10 +2,8 @@
 
     // Desafio Super Trunfo em C.
     // Tema 2 - Super Trunfo em c: Desenvolvendo a Lógica do Jogo
-    // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-    // Siga os comentários para implementar cada parte do desafio.
     // Programa Elaborado por Joao Victor
-    // Desafio Nível Aventureiro
+    // Desafio Nível Mestre
 
 int main() {
 
@@ -19,49 +17,43 @@ int main() {
     float area1 = 85157, area2 = 2780400; 
     float pib1 = 2174000000000, pib2 = 646100000000;
     float densid_1, densid_2, pib_capt1, pib_capt2, vs_densid;
-    int turistico1, turistico2, vs_turistico, vs_populacao, vs_area, vs_pib, escolha_pais1, escolha_pais2;       
-    
-    //Calculando densidade carta 1 
-
-    densid_1 = (float) (populacao1 / area1); 
-   
-    //Calculando densidade carta 2
-
-    densid_2 = (float) (populacao2 / area2); 
-    
-    
+    int turistico1, turistico2, vs_resultado1, vs_resultado2, escolha_1,escolha_2;      
      
+    
+    densid_1 = (float) (populacao1 / area1); //Calculando densidade carta 1 
+    densid_2 = (float) (populacao2 / area2); //Calculando densidade carta 2
+        
     // MENU PRINCIPAL PARA ESCOLHA DO ITEM A SER COMPARADO
     printf("***Bem vindo ao jogo!\n");
     printf("Escolha o primeiro atributo.\n1. População\n2. Área\n3. PIB\n4. Pontos Turísticos\n5. Densidade demográfica\nEscolha=> ");
-    scanf ("%d", &pais1);
+    scanf ("%d", &escolha_1);
 
-    switch (escolha_pais1)
+    switch (escolha_1)
     {
     case 1: //Comparando atributo populacao
     printf("Você escolheu a opção População!\n");
-    vs_populacao = populacao1 > populacao2 ? 1 : 0;
+    vs_resultado1 = populacao1 > populacao2 ? 1 : 0;
     break;
 
     case 2: //Comparando atributo Área
     printf("Você escolheu a opção Área!\n");
-    vs_area = area1 > area2 ? 1 : 0;
+    vs_resultado1 = area1 > area2 ? 1 : 0;
     break; 
 
     case 3: //Comparando atributo PIB
     printf("Você escolheu a opção PIB!\n");
-    vs_pib = pib1 > pib2 ? 1 : 0;
+    vs_resultado1 = pib1 > pib2 ? 1 : 0;
     break;
 
     case 4: //Comparando atributo Pontos Turisticos
     printf("Você escolheu a opção Pontos turísticos!\n");
-    vs_turistico = turistico1 > turistico2 ? 1 : 0;
+    vs_resultado1 = turistico1 > turistico2 ? 1 : 0;
     break;
 
 
     case 5: //Comparando atributo Densidade demografica
     printf("Você escolheu a opção Densidade demográfica!\n");
-    vs_densid = densid_1 < densid_2 ? 1 : 0;
+    vs_resultado1 = densid_1 < densid_2 ? 1 : 0;
     break;
 
 
@@ -72,6 +64,107 @@ int main() {
     }        
 
 
+    printf("Escolha o segundo atributo.\n1. População\n2. Área\n3. PIB\n4. Pontos Turísticos\n5. Densidade demográfica\nEscolha=> ");
+    scanf ("%d", &escolha_2);
+
+    switch (escolha_2)
+    {
+    case 1: //Comparando atributo populacao
+    printf("Você escolheu a opção População!\n");
+    vs_resultado1 = populacao1 > populacao2 ? 1 : 0;
+    break;
+
+    case 2: //Comparando atributo Área
+    printf("Você escolheu a opção Área!\n");
+    vs_resultado1 = area1 > area2 ? 1 : 0;
+    break; 
+
+    case 3: //Comparando atributo PIB
+    printf("Você escolheu a opção PIB!\n");
+    vs_resultado1 = pib1 > pib2 ? 1 : 0;
+    break;
+
+    case 4: //Comparando atributo Pontos Turisticos
+    printf("Você escolheu a opção Pontos turísticos!\n");
+    vs_resultado1 = turistico1 > turistico2 ? 1 : 0;
+    break;
+
+
+    case 5: //Comparando atributo Densidade demografica
+    printf("Você escolheu a opção Densidade demográfica!\n");
+    vs_resultado1 = densid_1 < densid_2 ? 1 : 0;
+    break;
+
+
+    default:
+    printf("Opção Inválida!");
+    break;
+
+    }        
+
+    if (escolha_1 == escolha_2)
+    {
+        printf("Você escolheu o mesmo atributo!\n");
+    } else {
+        switch (escolha_2)
+        {
+        case 1: //Comparando atributo populacao
+        printf("Você escolheu a opção População!\n");
+        vs_resultado2 = populacao1 > populacao2 ? 1 : 0;
+        break;
+    
+        case 2: //Comparando atributo Área
+        printf("Você escolheu a opção Área!\n");
+        vs_resultado2 = area1 > area2 ? 1 : 0;
+        break; 
+    
+        case 3: //Comparando atributo PIB
+        printf("Você escolheu a opção PIB!\n");
+        vs_resultado2 = pib1 > pib2 ? 1 : 0;
+        break;
+    
+        case 4: //Comparando atributo Pontos Turisticos
+        printf("Você escolheu a opção Pontos turísticos!\n");
+        vs_resultado2 = turistico1 > turistico2 ? 1 : 0;
+        break;
+    
+    
+        case 5: //Comparando atributo Densidade demografica
+        printf("Você escolheu a opção Densidade demográfica!\n");
+        vs_resultado2 = densid_1 < densid_2 ? 1 : 0;
+        break;
+    
+    
+        default:
+        printf("Opção Inválida!");
+        break;
+    
+        }        
+        
+        if (vs_resultado1 && vs_resultado2)
+        {
+        printf("Pais: %s ganhou!", pais1);
+        if(escolha_1 == 1)
+        {
+            printf("País: %s ganhou !", pais1);
+            
+        }     
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 

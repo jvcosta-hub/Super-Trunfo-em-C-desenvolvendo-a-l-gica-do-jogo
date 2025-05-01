@@ -2,8 +2,6 @@
 
     // Desafio Super Trunfo em C.
     // Tema 2 - Super Trunfo em c: Desenvolvendo a Lógica do Jogo
-    // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-    // Siga os comentários para implementar cada parte do desafio.
     // Programa Elaborado por Joao Victor
     // Desafio Nível Aventureiro
 
@@ -21,16 +19,9 @@ int main() {
     float densid_1, densid_2, pib_capt1, pib_capt2, vs_densid, vs_pib_capt;
     int turistico1, turistico2, vs_turistico, escolha_atributo, comparativo;       
     
-    //Calculando variáveis carta 1 
-
-    densid_1 = (float) (populacao1 / area1); 
-   
-    //Calculando variáveis carta 2
-
-    densid_2 = (float) (populacao2 / area2); 
-    
-    
-     
+    densid_1 = (float) (populacao1 / area1); //Calculando variáveis carta 1 
+    densid_2 = (float) (populacao2 / area2); //Calculando variáveis carta 2
+            
     // MENU PRINCIPAL PARA ESCOLHA DO ITEM A SER COMPARADO
     printf("***Escolha um atribuito para comparação***\n1. População\n2. Área\n3. PIB\n4. Pontos Turísticos\n5. Densidade demográfica\nEscolha=> ");
     scanf ("%d", &escolha_atributo);
