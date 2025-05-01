@@ -31,6 +31,7 @@ int main() {
     switch (escolha_1)
     {
     case 1: //Comparando atributo populacao
+    
     printf("Você escolheu a opção População!\n");
     vs_resultado1 = populacao1 > populacao2 ? 1 : 0;
     break;
@@ -64,43 +65,8 @@ int main() {
     }        
 
 
-    printf("Escolha o segundo atributo.\n1. População\n2. Área\n3. PIB\n4. Pontos Turísticos\n5. Densidade demográfica\nEscolha=> ");
+    printf("\nEscolha o segundo atributo.\n1. População\n2. Área\n3. PIB\n4. Pontos Turísticos\n5. Densidade demográfica\nEscolha=> ");
     scanf ("%d", &escolha_2);
-
-    switch (escolha_2)
-    {
-    case 1: //Comparando atributo populacao
-    printf("Você escolheu a opção População!\n");
-    vs_resultado1 = populacao1 > populacao2 ? 1 : 0;
-    break;
-
-    case 2: //Comparando atributo Área
-    printf("Você escolheu a opção Área!\n");
-    vs_resultado1 = area1 > area2 ? 1 : 0;
-    break; 
-
-    case 3: //Comparando atributo PIB
-    printf("Você escolheu a opção PIB!\n");
-    vs_resultado1 = pib1 > pib2 ? 1 : 0;
-    break;
-
-    case 4: //Comparando atributo Pontos Turisticos
-    printf("Você escolheu a opção Pontos turísticos!\n");
-    vs_resultado1 = turistico1 > turistico2 ? 1 : 0;
-    break;
-
-
-    case 5: //Comparando atributo Densidade demografica
-    printf("Você escolheu a opção Densidade demográfica!\n");
-    vs_resultado1 = densid_1 < densid_2 ? 1 : 0;
-    break;
-
-
-    default:
-    printf("Opção Inválida!");
-    break;
-
-    }        
 
     if (escolha_1 == escolha_2)
     {
@@ -139,32 +105,21 @@ int main() {
         printf("Opção Inválida!");
         break;
     
-        }        
+        }
         
         if (vs_resultado1 && vs_resultado2)
         {
-        printf("Pais: %s ganhou!", pais1);
-        if(escolha_1 == 1)
+        printf("\nPais: %s ganhou!\n\n", pais1);
+        } else if(vs_resultado1 != vs_resultado2)
         {
-            printf("País: %s ganhou !", pais1);
+            printf("\nEmpate!\n\n");
             
-        }     
+        } else {
+            printf("\nInfelizmente você perdeu!\n\n"); 
+        }    
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+    
 
 
 
